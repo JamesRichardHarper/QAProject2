@@ -1,0 +1,9 @@
+{
+	"CompanyEmail":"TroborUser@outlook.com",
+	"CompanyPassword":"WeLoveTrobor",
+	"OrchestratorList":"User list",
+	"ExcelPage":"Users",
+	"CreateTemplate":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\CreationTemplate.txt",
+	"NotSpecified":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\Not Specified Email.txt",
+	"ClientExcelLocation":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\Clients.xlsx"
+}

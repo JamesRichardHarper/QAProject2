@@ -1,0 +1,10 @@
+Hello {0},
+
+It appears you put "{1}" as your subject heading. Unfortunetly this isn't a viable option within our system.
+
+To create an account use "CREATE".
+To edit an account use "CHANGE" and submit a new creation table with your unique ID appended to the row, with the ID in the corresponding box.
+To delete your account use "DELETE" and submit your unique ID in a table form similar to how the account was created.
+
+Best Regards,
+Tobor Inc.

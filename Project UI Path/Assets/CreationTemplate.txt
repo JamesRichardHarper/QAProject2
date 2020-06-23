@@ -1,0 +1,12 @@
+Hello {0},
+
+Your request for an account with Tobor Inc. has been {1}.
+
+You have wanted to sign up for {2} content, on a {3} interval.
+
+Your Unique ID is {4}.
+
+If your application was unsuccessful, we will be in touch shortly.
+
+Best Regards,
+Tobor Inc.

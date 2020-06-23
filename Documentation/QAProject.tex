@@ -7,12 +7,14 @@
 \usepackage{lipsum}
 \usepackage{geometry}
 \usepackage{fancyhdr}
+\usepackage{charter}
 
 % Bibliograhpy
 \usepackage[super,numbers,sort&compress]{natbib}
 
 %Image Software
 \usepackage{graphicx}
+\usepackage[space]{grffile}
 \usepackage{float}
 
 %Equation Software
@@ -56,22 +58,34 @@
 
 \setcounter{page}{1}
 
-\subsection{Aims}
+\subsection{Introduction}
 
 Aims
 
-\subsection{Background}
+\subsection{States}
 
-Background
+There are several sattes and proggression points that ae wanted from this automation, starting with what the current siutation is and what is expected to happen.
 
-\subsection{Example For Code Use}
+\subsubsection{Current}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=3in]{D:/Uni_work/Year_3/Project/Report/Images/RacetrackDrawing.png}
-	\caption[IBM]{Horseshoe Racetrack Memory Design}
-	\label{fig:Racetrack}
+	\includegraphics[height=3in]{C:/Users/james/Documents/Work/QA Consulting/Training Notes/Project (5 - 9)/Documentation/Images/Email Table}
+	\caption[RegistrationTable]{Table used for registration}
+	\label{fig:RegistrationTable}
 \end{figure}
+
+\subsubsection{Planned}
+
+As was seen in figure \ref{fig:RegistrationTable} Tobor Inc. started out with using a HTML table sent through an email. This has now been adpapted for automation use with each box having an index of zero through to twenty, with the properties tables being zero, two, four etc... and the information being one, three, five etc... These tables can now be used as the standard format, as before, but with the robot calling the required index
+
+\subsubsection{Benefits}
+
+\subsubsection{Challenges}
+
+
+\subsection{Example For Code Use}
+
 
 \begin{equation}\label{eq:LL}
 \bm{\dot{M}} = \bm{ \gamma M} \; x \; \bm{ H_{eff}} - \bm{ \lambda M} \; x \; \bm{  (M } \; x \; \bm{ H_{eff})}
