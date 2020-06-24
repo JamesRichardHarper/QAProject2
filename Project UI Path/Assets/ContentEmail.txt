@@ -1,0 +1,8 @@
+Hello {0},
+
+Your content for today is as follows:
+
+{1}
+
+Many Thanks,
+Tobor Inc.

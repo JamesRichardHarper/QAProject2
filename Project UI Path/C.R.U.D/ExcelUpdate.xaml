@@ -98,10 +98,10 @@
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
                     <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="sd:DataRow">[ExcelUserSheet.Rows(RetrievedRowIndex)]</OutArgument>
+                      <OutArgument x:TypeArguments="sd:DataRow">[RetrievedRow]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="sd:DataRow">[RetrievedRow]</InArgument>
+                      <InArgument x:TypeArguments="sd:DataRow">[ExcelUserSheet.Rows(RetrievedRowIndex)]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
