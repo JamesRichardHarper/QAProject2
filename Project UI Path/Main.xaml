@@ -50,6 +50,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="1268,1490" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -316,7 +317,7 @@
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <av:Point x:Key="ShapeLocation">432,1169</av:Point>
                                         <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                        <av:PointCollection x:Key="ConnectorLocation">532,1220 532,1250 563,1250 563,1270</av:PointCollection>
+                                        <av:PointCollection x:Key="ConnectorLocation">532,1220 532,1270</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[NewEmails]">
@@ -354,9 +355,9 @@
                                       <FlowStep x:Name="__ReferenceID12">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">432,1270</av:Point>
+                                            <av:Point x:Key="ShapeLocation">401,1270</av:Point>
                                             <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">563,1330 563,1360 402,1360 402,1395.5 432,1395.5</av:PointCollection>
+                                            <av:PointCollection x:Key="ConnectorLocation">532,1330 532,1360 402,1360 402,1405.5 432,1405.5</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -376,9 +377,9 @@
                                           <FlowStep x:Name="__ReferenceID13">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <av:Point x:Key="ShapeLocation">432,1370</av:Point>
+                                                <av:Point x:Key="ShapeLocation">432,1380</av:Point>
                                                 <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                <av:PointCollection x:Key="ConnectorLocation">632,1395.5 724,1395.5 724,604.75 798,604.75</av:PointCollection>
+                                                <av:PointCollection x:Key="ConnectorLocation">632,1405.5 693,1405.5 693,604.75 798,604.75</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[EmailChange.ToString + &quot; Emails were added/altered.&quot;]">
@@ -409,7 +410,7 @@
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">733,720</av:Point>
                         <av:Size x:Key="ShapeSize">200,51</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">833,771 833,801 1040,801 1040,834.5</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">833,771 833,821</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Beggining Content collection&quot;]">
@@ -423,14 +424,21 @@
                       <FlowStep x:Name="__ReferenceID15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <av:Point x:Key="ShapeLocation">940,834.5</av:Point>
+                            <av:Point x:Key="ShapeLocation">733,821</av:Point>
                             <av:Size x:Key="ShapeSize">200,51</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Content/Content.xaml">
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Content/Content.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InOutArgument x:TypeArguments="x:String" x:Key="ErrorCount" />
-                            <InArgument x:TypeArguments="x:String" x:Key="ConfigJson" />
+                            <InOutArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">
+                              <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="ErrorCount" />
+                            </InOutArgument>
+                            <InArgument x:TypeArguments="njl:JObject" x:Key="ConfigJson">
+                              <mva:VisualBasicValue x:TypeArguments="njl:JObject" ExpressionText="ConfigJson" />
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="TechContent" />
+                            <InArgument x:TypeArguments="x:String" x:Key="HobbyContent" />
+                            <InArgument x:TypeArguments="x:String" x:Key="SportsContent" />
                           </ui:InvokeWorkflowFile.Arguments>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -487,27 +495,6 @@
     <x:Reference>__ReferenceID12</x:Reference>
     <x:Reference>__ReferenceID13</x:Reference>
     <x:Reference>__ReferenceID14</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">733,1124</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Hobbies File" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Content/Hobby Capture.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InOutArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">
-            <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="ErrorCount" />
-          </InOutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="HobbyContent" />
-        </ui:InvokeWorkflowFile.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeWorkflowFile>
-    </FlowStep>
     <x:Reference>__ReferenceID15</x:Reference>
   </Flowchart>
 </Activity>

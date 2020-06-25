@@ -4,8 +4,9 @@
 	"DailyList":"Daily list",
 	"WeekdayList":"Weekdays List",
 	"ExcelPage":"Users",
+	"ContentSubject":"Your Tobor Content",
 	"CreateTemplate":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\CreationTemplate.txt",
 	"NotSpecified":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\Not Specified Email.txt",
 	"ClientExcelLocation":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\Clients.xlsx",
-	"ContentEmail":"ClientExcelLocation":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\Clients.xlsx"
+	"ContentEmail":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\ContentEmail.txt"
 }

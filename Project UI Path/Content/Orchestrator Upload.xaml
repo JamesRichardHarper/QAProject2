@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1206,938</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1317,938</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Aggregate_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -40,7 +40,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -64,6 +64,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Orchestrator Upload" sap:VirtualizedContainerService.HintSize="666,873" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -131,17 +132,14 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
           <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID0" DisplayName="Day detector" sap:VirtualizedContainerService.HintSize="73,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-              <FlowDecision.Condition>
-                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Day = &quot;SATURDAY&quot; or Day = &quot;SUNDAY&quot;" />
-              </FlowDecision.Condition>
+            <FlowDecision x:Name="__ReferenceID0" Condition="[Day = &quot;SATURDAY&quot; or Day = &quot;SUNDAY&quot;]" DisplayName="Day detector" sap:VirtualizedContainerService.HintSize="73,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">465,437</av:Point>
                   <av:Size x:Key="ShapeSize">73,87</av:Size>
-                  <x:String x:Key="TrueLabel">Weekend</x:String>
-                  <x:String x:Key="FalseLabel">Weekday</x:String>
+                  <x:String x:Key="TrueLabel">Non-Daily</x:String>
+                  <x:String x:Key="FalseLabel">Daily</x:String>
                   <av:PointCollection x:Key="TrueConnector">465,480.5 201,480.5 201,574</av:PointCollection>
                   <av:PointCollection x:Key="FalseConnector">538,480.5 561,480.5 561,544 501,544 501,574</av:PointCollection>
                 </scg:Dictionary>
@@ -259,15 +257,9 @@
                                   </ui:MultipleAssign>
                                   <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="338,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[ConfigJson(&quot;WeekdayList&quot;).ToString]" Reference="[ID]">
                                     <ui:AddQueueItem.ItemInformation>
-                                      <InArgument x:TypeArguments="x:String" x:Key="FirstName">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FName" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="Email">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Email" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="Content">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Content" />
-                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="FirstName">[FName]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="Email">[Email]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="Content">[Content]</InArgument>
                                     </ui:AddQueueItem.ItemInformation>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -329,7 +321,7 @@
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[WeekendSheet]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[ExcelUserSheet]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="488,851" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
@@ -349,7 +341,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;User: &quot; + row(0).ToString + &quot;,&quot; +row(1).ToString + &quot;,&quot; +row(2).ToString + &quot;,&quot; +row(3).ToString]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;User: &quot; + row(0).ToString + vbNewLine + &quot;First Name: &quot; +row(1).ToString + vbNewLine + &quot;Email: &quot; +row(8).ToString + vbNewLine + &quot;Content: &quot; +row(9).ToString]" />
                               <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="338,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                                 <ui:MultipleAssign.AssignOperations>
                                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -374,7 +366,7 @@
                                         <OutArgument x:TypeArguments="x:String">[Email]</OutArgument>
                                       </ui:AssignOperation.To>
                                       <ui:AssignOperation.Value>
-                                        <InArgument x:TypeArguments="x:String">[row(2).ToString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String">[row(8).ToString]</InArgument>
                                       </ui:AssignOperation.Value>
                                     </ui:AssignOperation>
                                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
@@ -382,7 +374,7 @@
                                         <OutArgument x:TypeArguments="x:String">[Content]</OutArgument>
                                       </ui:AssignOperation.To>
                                       <ui:AssignOperation.Value>
-                                        <InArgument x:TypeArguments="x:String">[row(3).ToString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String">[row(9).ToString]</InArgument>
                                       </ui:AssignOperation.Value>
                                     </ui:AssignOperation>
                                   </scg:List>

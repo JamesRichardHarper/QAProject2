@@ -1,13 +1,13 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Tech_Capture" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="TechContent" Type="OutArgument(x:String)" />
     <x:Property Name="ErrrorCount" Type="InOutArgument(x:String)" />
     <x:Property Name="ConfigJson" Type="InArgument(njl:JObject)" />
+    <x:Property Name="TechContent" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1206,982</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1206,1082</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Tech_Capture_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -55,17 +55,21 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Tech_Capture" sap:VirtualizedContainerService.HintSize="486,877" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Tech_Capture" sap:VirtualizedContainerService.HintSize="486,977" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="TechWeb">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">https://www.bbc.co.uk/news/technology</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://www.bbc.co.uk/news/technology" Name="TechWeb" />
       <Variable x:TypeArguments="sd:DataTable" Name="TechNews" />
       <Variable x:TypeArguments="x:String" Name="TechString" />
+      <Variable x:TypeArguments="x:Int32" Name="Lines" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -84,7 +88,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[TechNews]" DisplayName="Extract Structured Data 'DIV  topos-component'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' class='nw-c-seven-slice gel-layout gel-layout--equal b-pw-1280' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout__item gel-1/1' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout gel-layout--equal' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout__item gel-1/1 gel-3/5@xxl gs-u-display-none@xl gs-u-display-block@xxl' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout gel-layout--equal' idx='1'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div' class='gs-c-promo gs-t-News nw-c-promo gs-o-faux-block-link gs-u-pb gs-u-pb+@m nw-p-default gs-c-promo--inline gs-c-promo--stacked@m gs-c-promo--flex' idx='1'/&gt;&lt;webctrl tag='div' class='gs-c-promo-body gs-u-mt@xxs gs-u-mt@m gs-c-promo-body--flex gs-u-mt@xs gs-u-mt0@xs gs-u-mt@m gel-1/2@xs gel-1/1@s' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' class='gs-c-promo-heading gs-o-faux-block-link__overlay-link gel-pica-bold nw-o-link-split__anchor' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" SimulateClick="True">
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[TechNews]" DisplayName="Extract Structured Data 'DIV  topos-component'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='BBC Technology' attr='text'&gt;&lt;webctrl tag='div' class='nw-c-seven-slice gel-layout gel-layout--equal b-pw-1280' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout__item gel-1/1' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout gel-layout--equal' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout__item gel-1/1 gel-3/5@xxl gs-u-display-none@xl gs-u-display-block@xxl' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout gel-layout--equal' idx='1'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div' class='gs-c-promo gs-t-News nw-c-promo gs-o-faux-block-link gs-u-pb gs-u-pb+@m nw-p-default gs-c-promo--inline gs-c-promo--stacked@m gs-c-promo--flex' idx='1'/&gt;&lt;webctrl tag='div' class='gs-c-promo-body gs-u-mt@xxs gs-u-mt@m gs-c-promo-body--flex gs-u-mt@xs gs-u-mt0@xs gs-u-mt@m gel-1/2@xs gel-1/1@s' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' class='gs-c-promo-heading gs-o-faux-block-link__overlay-link gel-pica-bold nw-o-link-split__anchor' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" SimulateClick="True">
               <ui:ExtractData.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c6bc2b5-a480-46d2-8be8-60749d83a126" InformativeScreenshot="738b965a056dd19db35cf3474a6958ee" Selector="&lt;webctrl id='topos-component' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
@@ -98,6 +102,14 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
+    <Assign sap:VirtualizedContainerService.HintSize="444,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[Lines]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+      </Assign.Value>
+    </Assign>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Tech content collected.&quot;]" />
     <ui:OutputDataTable DataTable="[TechNews]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[TechString]" />
     <Assign sap:VirtualizedContainerService.HintSize="444,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -108,6 +120,6 @@
         <InArgument x:TypeArguments="x:String">[TechString]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Tech content sent to 'Content.xaml'.&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Tech content sent to 'Content.xaml'.&quot; + vbNewLine + Lines.ToString + &quot; objects sent.&quot;]" />
   </Sequence>
 </Activity>
