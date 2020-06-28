@@ -67,8 +67,23 @@
     },
     {
       "Package": {
+        "Id": "UiPath.WebAPI.Activities",
+        "Version": "1.4.5"
+      },
+      "Assemblies": [
+        "C:\\Users\\james\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
+        "C:\\Users\\james\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\james\\.nuget\\packages\\restsharp/106.3.1\\lib/net452/RestSharp.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities/1.4.5\\lib/net452/UiPath.Web.Activities.Design.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities/1.4.5\\lib/net452/UiPath.Web.Activities.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities/1.4.5\\lib/net452/UiPath.Web.dll"
+      ],
+      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities\\1.4.5"
+    },
+    {
+      "Package": {
         "Id": "UiPath.UIAutomation.Activities",
-        "Version": "20.4.1"
+        "Version": "20.4.2"
       },
       "Assemblies": [
         "C:\\Users\\james\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
@@ -83,27 +98,27 @@
         "C:\\Users\\james\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
         "C:\\Users\\james\\.nuget\\packages\\system.threading.tasks.dataflow/4.10.0\\lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
         "C:\\Users\\james\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath/20.4.7422.14731\\lib/UiPath.Interop.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath/20.4.7472.17184\\lib/UiPath.Interop.dll",
         "C:\\Users\\james\\.nuget\\packages\\uipath.ocr.contracts/2.6.0\\lib/net461/UiPath.OCR.Contracts.dll",
         "C:\\Users\\james\\.nuget\\packages\\uipath.platform/20.4.0\\lib/net461/UiPath.Platform.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.telemetry.client/1.1.51\\lib/net461/TelemetryClient.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.Editors.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.Text.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/UiPath.CV.Activities.Design.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/UiPath.CV.Activities.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/UiPath.CV.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/UiPath.UiAutomation.Activities.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.1\\lib/net461/UiPath.Wizards.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.telemetry.client/1.2.20\\lib/net461/TelemetryClient.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.Editors.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/UiPath.CV.Activities.Design.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/UiPath.CV.Activities.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/UiPath.CV.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities/20.4.2\\lib/net461/UiPath.Wizards.dll",
         "C:\\Users\\james\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\james\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.Core.dll",
         "C:\\Users\\james\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.GoogleCloud.dll",
@@ -112,22 +127,20 @@
         "C:\\Users\\james\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\james\\.nuget\\packages\\uipath.vision/2.0.3\\lib/net461/UiPath.Vision.dll"
       ],
-      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1"
+      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2"
     },
     {
       "Package": {
-        "Id": "UiPath.WebAPI.Activities",
-        "Version": "1.4.5"
+        "Id": "UiPath.Word.Activities",
+        "Version": "1.4.2"
       },
       "Assemblies": [
-        "C:\\Users\\james\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
-        "C:\\Users\\james\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
-        "C:\\Users\\james\\.nuget\\packages\\restsharp/106.3.1\\lib/net452/RestSharp.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities/1.4.5\\lib/net452/UiPath.Web.Activities.Design.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities/1.4.5\\lib/net452/UiPath.Web.Activities.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities/1.4.5\\lib/net452/UiPath.Web.dll"
+        "C:\\Users\\james\\.nuget\\packages\\docx/1.0.0.18\\lib/net40/DocX.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.word.activities/1.4.2\\lib/net461/UiPath.Word.Activities.Design.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.word.activities/1.4.2\\lib/net461/UiPath.Word.Activities.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.word.activities/1.4.2\\lib/net461/UiPath.Word.dll"
       ],
-      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities\\1.4.5"
+      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.word.activities\\1.4.2"
     }
   ],
   "Conflicts": [],
@@ -160,6 +173,11 @@
     "DocumentFormat.OpenXml": {
       "Id": "DocumentFormat.OpenXml",
       "Version": "2.5.0",
+      "Dependencies": []
+    },
+    "DocX": {
+      "Id": "DocX",
+      "Version": "1.0.0.18",
       "Dependencies": []
     },
     "Extended.Wpf.Toolkit": {
@@ -249,7 +267,7 @@
     },
     "UiPath": {
       "Id": "UiPath",
-      "Version": "20.4.7422.14731",
+      "Version": "20.4.7472.17184",
       "Dependencies": []
     },
     "UiPath.Excel.Activities": {
@@ -351,7 +369,7 @@
     },
     "UiPath.Telemetry.Client": {
       "Id": "UiPath.Telemetry.Client",
-      "Version": "1.1.51",
+      "Version": "1.2.20",
       "Dependencies": [
         {
           "Item1": "Newtonsoft.Json",
@@ -365,11 +383,11 @@
     },
     "UiPath.UIAutomation.Activities": {
       "Id": "UiPath.UIAutomation.Activities",
-      "Version": "20.4.1",
+      "Version": "20.4.2",
       "Dependencies": [
         {
           "Item1": "UiPath",
-          "Item2": "[20.4.7422.14731, 20.4.7422.14731]"
+          "Item2": "[20.4.7472.17184, 20.4.7472.17184]"
         },
         {
           "Item1": "UiPath.Vision",
@@ -409,7 +427,7 @@
         },
         {
           "Item1": "UiPath.Telemetry.Client",
-          "Item2": "[1.1.51, )"
+          "Item2": "[1.2.20, )"
         }
       ]
     },
@@ -438,6 +456,16 @@
         {
           "Item1": "RestSharp",
           "Item2": "[106.3.1, )"
+        }
+      ]
+    },
+    "UiPath.Word.Activities": {
+      "Id": "UiPath.Word.Activities",
+      "Version": "1.4.2",
+      "Dependencies": [
+        {
+          "Item1": "DocX",
+          "Item2": "[1.0.0.18, )"
         }
       ]
     }
@@ -492,6 +520,16 @@
         "C:\\Users\\james\\.nuget\\packages\\documentformat.openxml\\2.5.0\\lib\\DocumentFormat.OpenXml.dll"
       ],
       "Path": "C:\\Users\\james\\.nuget\\packages\\documentformat.openxml\\2.5.0"
+    },
+    {
+      "Package": {
+        "Id": "DocX",
+        "Version": "1.0.0.18"
+      },
+      "Assemblies": [
+        "C:\\Users\\james\\.nuget\\packages\\docx\\1.0.0.18\\lib\\net40\\DocX.dll"
+      ],
+      "Path": "C:\\Users\\james\\.nuget\\packages\\docx\\1.0.0.18"
     },
     {
       "Package": {
@@ -645,12 +683,12 @@
     {
       "Package": {
         "Id": "UiPath",
-        "Version": "20.4.7422.14731"
+        "Version": "20.4.7472.17184"
       },
       "Assemblies": [
-        "C:\\Users\\james\\.nuget\\packages\\uipath\\20.4.7422.14731\\lib\\UiPath.Interop.dll"
+        "C:\\Users\\james\\.nuget\\packages\\uipath\\20.4.7472.17184\\lib\\UiPath.Interop.dll"
       ],
-      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath\\20.4.7422.14731"
+      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath\\20.4.7472.17184"
     },
     {
       "Package": {
@@ -723,38 +761,38 @@
     {
       "Package": {
         "Id": "UiPath.Telemetry.Client",
-        "Version": "1.1.51"
+        "Version": "1.2.20"
       },
       "Assemblies": [
-        "C:\\Users\\james\\.nuget\\packages\\uipath.telemetry.client\\1.1.51\\lib\\net461\\TelemetryClient.dll"
+        "C:\\Users\\james\\.nuget\\packages\\uipath.telemetry.client\\1.2.20\\lib\\net461\\TelemetryClient.dll"
       ],
-      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.telemetry.client\\1.1.51"
+      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.telemetry.client\\1.2.20"
     },
     {
       "Package": {
         "Id": "UiPath.UIAutomation.Activities",
-        "Version": "20.4.1"
+        "Version": "20.4.2"
       },
       "Assemblies": [
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.DataGrid.Contrib.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.Docking.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.Editors.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.Ribbon.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.Shared.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.SyntaxEditor.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.Text.LLParser.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.Text.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\ActiproSoftware.Wizard.Wpf.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\UiPath.CV.Activities.Design.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\UiPath.CV.Activities.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\UiPath.CV.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
-        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1\\lib\\net461\\UiPath.Wizards.dll"
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.DataGrid.Contrib.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.Editors.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\UiPath.CV.Activities.Design.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\UiPath.CV.Activities.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\UiPath.CV.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2\\lib\\net461\\UiPath.Wizards.dll"
       ],
-      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.1"
+      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.uiautomation.activities\\20.4.2"
     },
     {
       "Package": {
@@ -778,6 +816,18 @@
         "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities\\1.4.5\\lib\\net452\\UiPath.Web.dll"
       ],
       "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.webapi.activities\\1.4.5"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Word.Activities",
+        "Version": "1.4.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\james\\.nuget\\packages\\uipath.word.activities\\1.4.2\\lib\\net461\\UiPath.Word.Activities.Design.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.word.activities\\1.4.2\\lib\\net461\\UiPath.Word.Activities.dll",
+        "C:\\Users\\james\\.nuget\\packages\\uipath.word.activities\\1.4.2\\lib\\net461\\UiPath.Word.dll"
+      ],
+      "Path": "C:\\Users\\james\\.nuget\\packages\\uipath.word.activities\\1.4.2"
     }
   ]
 }

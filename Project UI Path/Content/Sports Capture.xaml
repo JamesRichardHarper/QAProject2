@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1206,2122</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>787,3076</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Web_Capture_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -39,7 +39,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -60,35 +60,67 @@
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Web_Capture" sap:VirtualizedContainerService.HintSize="486,2017" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Web_Capture" sap:VirtualizedContainerService.HintSize="797,2971" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://www.bbc.co.uk/sport/football/premier-league/scores-fixtures" Name="SportsSiteOne" />
       <Variable x:TypeArguments="sd:DataTable" Name="League" />
       <Variable x:TypeArguments="x:Int32" Name="Lines" />
       <Variable x:TypeArguments="x:String" Name="MasterTeam" />
+      <Variable x:TypeArguments="x:String" Default="https://metro.co.uk/sport/cricket/" Name="SportsSiteTwo" />
+      <Variable x:TypeArguments="x:String" Default="https://www.sportbible.com/ufc-news" Name="SportsSiteThree" />
+      <Variable x:TypeArguments="sd:DataTable" Name="UFCBibleNews" />
+      <Variable x:TypeArguments="sd:DataTable" Name="CricketNewsMetro" />
+      <Variable x:TypeArguments="x:String" Name="CricketNewsString" />
+      <Variable x:TypeArguments="x:String" Name="UFCText" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="444,361" sap2010:WorkflowViewState.IdRef="OpenBrowser_6" Url="[SportsSiteOne]">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="755,851" sap2010:WorkflowViewState.IdRef="OpenBrowser_6" Url="[SportsSiteOne]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,750" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[League]" DisplayName="Extract Structured Data 'UL'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Matches' attr='text'&gt;&lt;webctrl tag='li' class='gs-o-list-ui__item gs-u-pb-'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100" SimulateClick="True">
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[League]" DisplayName="Extract Structured Data 'UL'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Football Matches Today' attr='text'&gt;&lt;webctrl tag='li' class='gs-o-list-ui__item gs-u-pb-'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100" SimulateClick="True">
               <ui:ExtractData.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e5de69bb-db15-4997-9424-f1f759840f2a" InformativeScreenshot="e2e35fb619b8e6176db235c2bf7de912" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;ul' parentid='u7339795504560069' tag='UL' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:ExtractData.Target>
+            </ui:ExtractData>
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[SportsSiteTwo]" />
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[CricketNewsMetro]" DisplayName="Extract Structured Data 'DIV  mosaic-channel-zon...'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Metro Cricket News' attr='text'&gt;&lt;webctrl tag='div' class='mosaic-channel-zone-widget mosaic' idx='1'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='h3' class='title' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='span' class='colour-box' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="100" SimulateClick="True">
+              <ui:ExtractData.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bfa5f6ed-779e-4eab-afe4-8d5454f1e024" InformativeScreenshot="c323664a5fa71e4eb5a2eefb0a9e00be" Selector="&lt;webctrl id='mosaic-channel-zone-wrapper' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:ExtractData.Target>
+            </ui:ExtractData>
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[SportsSiteThree]" />
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[UFCBibleNews]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;column exact='0' name='UFC News' attr='text'&gt;&lt;webctrl tag='div' class='category__articles css-a64lcr-padding-padding' idx='1'/&gt;&lt;webctrl tag='div' class='css-3zd4vl-padding-margin' idx='1'/&gt;&lt;webctrl tag='div' class='css-4rorcd' idx='1'/&gt;&lt;webctrl tag='div' class='css-1ylau3j-gridWidth'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='h2' class='css-1i616dp' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_5" MaxNumberOfResults="100" SimulateClick="True">
+              <ui:ExtractData.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d06de9e5-9ada-4dc2-bd4f-f55726f8b566" InformativeScreenshot="c6c8360fa8b8a5660cff6765019eaaf6" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -100,8 +132,8 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Sports content collected&quot;]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="444,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="755,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Sports content collected&quot;]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="755,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
@@ -117,15 +149,13 @@
               <OutArgument x:TypeArguments="x:String">[MasterTeam]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
-              </InArgument>
+              <InArgument x:TypeArguments="x:String">Football Matches Today:</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[League]" DisplayName="For Each Match" sap:VirtualizedContainerService.HintSize="444,862" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[League]" DisplayName="For Each Match" sap:VirtualizedContainerService.HintSize="755,862" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -226,15 +256,39 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <Assign sap:VirtualizedContainerService.HintSize="444,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <ui:OutputDataTable DataTable="[CricketNewsMetro]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="755,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[CricketNewsString]" />
+    <ui:OutputDataTable DataTable="[UFCBibleNews]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="755,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[UFCText]" />
+    <If Condition="[MasterTeam.Contains(&quot;Football Matches Today:&quot;)]" sap:VirtualizedContainerService.HintSize="755,431" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Warn" Message="[&quot;No football matches found for sports content.&quot;]" />
+          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[MasterTeam]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">No premier league matches are on today.</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Football matches found for sports content.&quot;]" />
+      </If.Else>
+    </If>
+    <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[SportsContent]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[MasterTeam]</InArgument>
+        <InArgument x:TypeArguments="x:String">[MasterTeam + vbNewLine + vbNewLine + CricketNewsString + vbNewLine + vbNewLine + UFCText]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Final match up for today:&quot; + vbNewLine + MasterTeam]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Sports content sent to 'Content.xaml'.&quot; + vbNewLine + Lines.ToString + &quot; objects sent.&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="755,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Sports content sent to 'Content.xaml'.&quot; + vbNewLine + Lines.ToString + &quot; objects sent.&quot;]" />
   </Sequence>
 </Activity>

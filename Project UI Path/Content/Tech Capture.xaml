@@ -7,10 +7,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1206,1082</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1206,1596</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Tech_Capture_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="44">
+    <scg:List x:TypeArguments="x:String" Capacity="23">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -37,7 +37,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -64,33 +64,66 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Tech_Capture" sap:VirtualizedContainerService.HintSize="486,977" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Tech_Capture" sap:VirtualizedContainerService.HintSize="486,1491" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="https://www.bbc.co.uk/news/technology" Name="TechWeb" />
-      <Variable x:TypeArguments="sd:DataTable" Name="TechNews" />
-      <Variable x:TypeArguments="x:String" Name="TechString" />
-      <Variable x:TypeArguments="x:Int32" Name="Lines" />
+      <Variable x:TypeArguments="x:String" Default="https://www.bbc.co.uk/news/technology" Name="TechWebBBC" />
+      <Variable x:TypeArguments="sd:DataTable" Name="TechTableBBC" />
+      <Variable x:TypeArguments="x:String" Name="TechStringBBC" />
+      <Variable x:TypeArguments="x:String" Name="TechWebCNET">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">https://www.cnet.com/topics/tech-industry/</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="TechTableSky" />
+      <Variable x:TypeArguments="x:String" Name="TechWebSky">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">https://news.sky.com/technology</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="TechTableCNET" />
+      <Variable x:TypeArguments="x:String" Name="TechStringCNET" />
+      <Variable x:TypeArguments="x:String" Name="TechStringSky" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="444,361" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[TechWeb]">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="444,851" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[TechWebBBC]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,750" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[TechNews]" DisplayName="Extract Structured Data 'DIV  topos-component'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='BBC Technology' attr='text'&gt;&lt;webctrl tag='div' class='nw-c-seven-slice gel-layout gel-layout--equal b-pw-1280' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout__item gel-1/1' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout gel-layout--equal' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout__item gel-1/1 gel-3/5@xxl gs-u-display-none@xl gs-u-display-block@xxl' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout gel-layout--equal' idx='1'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div' class='gs-c-promo gs-t-News nw-c-promo gs-o-faux-block-link gs-u-pb gs-u-pb+@m nw-p-default gs-c-promo--inline gs-c-promo--stacked@m gs-c-promo--flex' idx='1'/&gt;&lt;webctrl tag='div' class='gs-c-promo-body gs-u-mt@xxs gs-u-mt@m gs-c-promo-body--flex gs-u-mt@xs gs-u-mt0@xs gs-u-mt@m gel-1/2@xs gel-1/1@s' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' class='gs-c-promo-heading gs-o-faux-block-link__overlay-link gel-pica-bold nw-o-link-split__anchor' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" SimulateClick="True">
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[TechTableBBC]" DisplayName="Extract Structured Data 'DIV  topos-component'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='BBC Technology' attr='text'&gt;&lt;webctrl tag='div' class='nw-c-seven-slice gel-layout gel-layout--equal b-pw-1280' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout__item gel-1/1' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout gel-layout--equal' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout__item gel-1/1 gel-3/5@xxl gs-u-display-none@xl gs-u-display-block@xxl' idx='1'/&gt;&lt;webctrl tag='div' class='gel-layout gel-layout--equal' idx='1'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div' class='gs-c-promo gs-t-News nw-c-promo gs-o-faux-block-link gs-u-pb gs-u-pb+@m nw-p-default gs-c-promo--inline gs-c-promo--stacked@m gs-c-promo--flex' idx='1'/&gt;&lt;webctrl tag='div' class='gs-c-promo-body gs-u-mt@xxs gs-u-mt@m gs-c-promo-body--flex gs-u-mt@xs gs-u-mt0@xs gs-u-mt@m gel-1/2@xs gel-1/1@s' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' class='gs-c-promo-heading gs-o-faux-block-link__overlay-link gel-pica-bold nw-o-link-split__anchor' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" SimulateClick="True">
               <ui:ExtractData.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c6bc2b5-a480-46d2-8be8-60749d83a126" InformativeScreenshot="738b965a056dd19db35cf3474a6958ee" Selector="&lt;webctrl id='topos-component' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:ExtractData.Target>
+            </ui:ExtractData>
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[TechWebCNET]" />
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[TechTableCNET]" DisplayName="Extract Structured Data 'SECTION  topicListing'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='CNET News' attr='text'&gt;&lt;webctrl tag='div' class='row asset'/&gt;&lt;webctrl tag='div' class='col-6 assetBody' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h2' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" SimulateClick="True">
+              <ui:ExtractData.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5798b35-7f7d-40c6-96bc-479b80080255" InformativeScreenshot="240c43b349b377e9299b0c01cee69598" Selector="&lt;webctrl id='topicListing' tag='SECTION' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:ExtractData.Target>
+            </ui:ExtractData>
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[TechWebSky]" />
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[TechTableSky]" DisplayName="Extract Structured Data 'BODY'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Sky Tech News' attr='text'&gt;&lt;webctrl tag='div' class='sdc-site-tiles&amp;#10;          ' idx='1'/&gt;&lt;webctrl tag='div' class='sdc-site-tiles__inner' idx='1'/&gt;&lt;webctrl tag='div' class='sdc-site-tiles__group' idx='1'/&gt;&lt;webctrl tag='div' class='sdc-site-tiles__item sdc-site-tile sdc-site-tile--has-link'/&gt;&lt;webctrl tag='div' class='sdc-site-tile__body' idx='1'/&gt;&lt;webctrl tag='div' class='sdc-site-tile__body-main' idx='1'/&gt;&lt;webctrl tag='h3' class='sdc-site-tile__headline' idx='1'/&gt;&lt;webctrl tag='a' class='sdc-site-tile__headline-link' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100" SimulateClick="True">
+              <ui:ExtractData.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0916de71-5132-4c12-b2ca-553d49300909" InformativeScreenshot="df0d28a519de23ad04ca43ef7f2ecb14" Selector="&lt;webctrl tag='BODY' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -102,24 +135,18 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <Assign sap:VirtualizedContainerService.HintSize="444,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:Int32">[Lines]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">0</InArgument>
-      </Assign.Value>
-    </Assign>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Tech content collected.&quot;]" />
-    <ui:OutputDataTable DataTable="[TechNews]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[TechString]" />
+    <ui:OutputDataTable DataTable="[TechTableBBC]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[TechStringBBC]" />
+    <ui:OutputDataTable DataTable="[TechTableCNET]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[TechStringCNET]" />
+    <ui:OutputDataTable DataTable="[TechTableSky]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[TechStringSky]" />
     <Assign sap:VirtualizedContainerService.HintSize="444,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[TechContent]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[TechString]</InArgument>
+        <InArgument x:TypeArguments="x:String">[TechStringBBC + vbNewLine + vbNewLine + TechStringCNET + vbNewLine+ vbNewLine + TechStringSky]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Tech content sent to 'Content.xaml'.&quot; + vbNewLine + Lines.ToString + &quot; objects sent.&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Tech content sent to 'Content.xaml'.&quot;]" />
   </Sequence>
 </Activity>

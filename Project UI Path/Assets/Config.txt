@@ -1,12 +1,16 @@
 {
 	"CompanyEmail":"TroborUser@outlook.com",
 	"CompanyPassword":"WeLoveTrobor",
+	"ReportReciever":"TroborUser@outlook.com",
 	"DailyList":"Daily list",
 	"WeekdayList":"Weekdays List",
 	"ExcelPage":"Users",
+	"ExcelReportPage":"Content",
+	"ExcelEmailPage":"Email",
 	"ContentSubject":"Your Tobor Content",
 	"CreateTemplate":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\CreationTemplate.txt",
 	"NotSpecified":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\Not Specified Email.txt",
+	"ContentEmail":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\ContentEmail.txt",
 	"ClientExcelLocation":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\Clients.xlsx",
-	"ContentEmail":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\ContentEmail.txt"
+	"ReportLocation":"C:\\Users\\james\\Documents\\Work\\QA Consulting\\Training Notes\\Project (5 - 9)\\Project UI Path\\Assets\\Reports\\"
 }

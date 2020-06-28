@@ -6,8 +6,9 @@
     "UiPath.Excel.Activities": "[2.8.5]",
     "UiPath.Mail.Activities": "[1.8.5]",
     "UiPath.System.Activities": "[20.4.0]",
-    "UiPath.UIAutomation.Activities": "[20.4.1]",
-    "UiPath.WebAPI.Activities": "[1.4.5]"
+    "UiPath.UIAutomation.Activities": "[20.4.2]",
+    "UiPath.WebAPI.Activities": "[1.4.5]",
+    "UiPath.Word.Activities": "[1.4.2]"
   },
   "webServices": [],
   "schemaVersion": "4.0",
