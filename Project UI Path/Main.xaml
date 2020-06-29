@@ -28,7 +28,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -51,6 +51,8 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="1284,1490" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -228,7 +230,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">1140,355.5 1140,385.5 1110,385.5 1110,414.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:BuildDataTable DataTable="[ContentReport]" DisplayName="Build Content Report" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Index&quot; msdata:AutoIncrement=&quot;true&quot; type=&quot;xs:int&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Unique_x0020_ID&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Content&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Index&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+                      <ui:BuildDataTable DataTable="[ContentReport]" DisplayName="Build Content Report" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Index&quot; msdata:AutoIncrement=&quot;true&quot; type=&quot;xs:int&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Unique_x0020_ID&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Content&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xA;        &lt;xs:field xpath=&quot;Index&quot; /&gt;&#xA;      &lt;/xs:unique&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -241,10 +243,10 @@
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">1010,414.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">1110,465.5 1110,553 833,553 833,583</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">1110,465.5 1110,546.5 860,546.5 860,576.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:BuildDataTable DataTable="[CollectionReport]" DisplayName="Build Collection Report" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Index&quot; msdata:AutoIncrement=&quot;true&quot; type=&quot;xs:int&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Contents&quot; type=&quot;xs:string&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Class&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Index&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+                          <ui:BuildDataTable DataTable="[CollectionReport]" DisplayName="Build Collection Report" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Index&quot; msdata:AutoIncrement=&quot;true&quot; type=&quot;xs:int&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Contents&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Class&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xA;        &lt;xs:field xpath=&quot;Index&quot; /&gt;&#xA;      &lt;/xs:unique&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -266,24 +268,12 @@
                                     <TryCatch.Try>
                                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Report.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="ContentReport">
-                                            <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="ContentReport" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="CollectionReport">
-                                            <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="CollectionReport" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="CRUDReport">
-                                            <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="CRUDReport" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">
-                                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="ErrorCount" />
-                                          </InArgument>
-                                          <InArgument x:TypeArguments="njl:JObject" x:Key="ConfigJSON">
-                                            <mva:VisualBasicValue x:TypeArguments="njl:JObject" ExpressionText="ConfigJson" />
-                                          </InArgument>
-                                          <OutArgument x:TypeArguments="x:String" x:Key="PDFLocation">
-                                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="PDFLocation" />
-                                          </OutArgument>
+                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="ContentReport">[ContentReport]</InArgument>
+                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="CollectionReport">[CollectionReport]</InArgument>
+                                          <InArgument x:TypeArguments="sd:DataTable" x:Key="CRUDReport">[CRUDReport]</InArgument>
+                                          <InArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">[ErrorCount]</InArgument>
+                                          <InArgument x:TypeArguments="njl:JObject" x:Key="ConfigJSON">[ConfigJson]</InArgument>
+                                          <OutArgument x:TypeArguments="x:String" x:Key="PDFLocation">[PDFLocation]</OutArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -293,10 +283,10 @@
                                       </ui:InvokeWorkflowFile>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,160" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
@@ -318,7 +308,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">1134,775.02 1134,805.02 1150,805.02 1150,864.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Account="[ConfigJson(&quot;CompanyEmail&quot;).ToString.ToLower]" AttachmentsCollection="[{PDFLocation}]" Body="Content Report" DisplayName="Send Report to Email" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" IsBodyHtml="False" IsDraft="False" Subject="Report" To="[ConfigJson(&quot;ReportReciever&quot;).ToString]">
+                                      <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Account="[ConfigJson(&quot;ReportReciever&quot;).ToString.ToLower]" AttachmentsCollection="[{PDFLocation}]" Body="Content Report" DisplayName="Send Report to Email" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" IsBodyHtml="False" IsDraft="False" Subject="Report" To="[ConfigJson(&quot;ReportReciever&quot;).ToString]">
                                         <ui:SendOutlookMail.Files>
                                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
                                         </ui:SendOutlookMail.Files>
@@ -352,11 +342,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <av:Point x:Key="ShapeLocation">798,583</av:Point>
+                                  <av:Point x:Key="ShapeLocation">825,576.5</av:Point>
                                   <av:Size x:Key="ShapeSize">70,87</av:Size>
-                                  <av:PointCollection x:Key="0Connector">798,626.5 662,626.5 662,745.5 632,745.5</av:PointCollection>
-                                  <av:PointCollection x:Key="Default">868,626.5 898,626.5 898,639.52 1034,639.52</av:PointCollection>
-                                  <av:PointCollection x:Key="1Connector">833,670 833,720</av:PointCollection>
+                                  <av:PointCollection x:Key="0Connector">825,620 662,620 662,745.5 632,745.5</av:PointCollection>
+                                  <av:PointCollection x:Key="Default">895,620 925,620 925,639.52 1034,639.52</av:PointCollection>
+                                  <av:PointCollection x:Key="1Connector">860,663.5 860,693.5 833,693.5 833,720</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <FlowStep x:Key="0" x:Name="__ReferenceID11">
@@ -413,10 +403,7 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                         </Assign>
                                         <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID9" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                                            <FlowDecision.Condition>
-                                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="NewEmails.Count = 0" />
-                                            </FlowDecision.Condition>
+                                          <FlowDecision x:Name="__ReferenceID9" Condition="[NewEmails.Count = 0]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -472,7 +459,7 @@
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <av:Point x:Key="ShapeLocation">432,1380</av:Point>
                                                             <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                            <av:PointCollection x:Key="ConnectorLocation">632,1405.5 693,1405.5 693,604.75 798,604.75</av:PointCollection>
+                                                            <av:PointCollection x:Key="ConnectorLocation">632,1405.5 693,1405.5 693,598.25 825,598.25</av:PointCollection>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[EmailChange.ToString + &quot; Emails were added/altered.&quot;]">
@@ -514,18 +501,10 @@
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke New Email Methods" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="C.R.U.D/Register.xaml">
                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                            <InArgument x:TypeArguments="snm:MailMessage" x:Key="Email">
-                                                              <mva:VisualBasicValue x:TypeArguments="snm:MailMessage" ExpressionText="Email" />
-                                                            </InArgument>
-                                                            <InArgument x:TypeArguments="njl:JObject" x:Key="ConfigJson">
-                                                              <mva:VisualBasicValue x:TypeArguments="njl:JObject" ExpressionText="ConfigJson" />
-                                                            </InArgument>
-                                                            <InOutArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">
-                                                              <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="ErrorCount" />
-                                                            </InOutArgument>
-                                                            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="CRUDReport">
-                                                              <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="CRUDReport" />
-                                                            </InOutArgument>
+                                                            <InArgument x:TypeArguments="snm:MailMessage" x:Key="Email">[Email]</InArgument>
+                                                            <InArgument x:TypeArguments="njl:JObject" x:Key="ConfigJson">[ConfigJson]</InArgument>
+                                                            <InOutArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">[ErrorCount]</InOutArgument>
+                                                            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="CRUDReport">[CRUDReport]</InOutArgument>
                                                           </ui:InvokeWorkflowFile.Arguments>
                                                         </ui:InvokeWorkflowFile>
                                                         <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
@@ -578,21 +557,13 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Content/Content.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <InOutArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">
-                                          <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="ErrorCount" />
-                                        </InOutArgument>
-                                        <InArgument x:TypeArguments="njl:JObject" x:Key="ConfigJson">
-                                          <mva:VisualBasicValue x:TypeArguments="njl:JObject" ExpressionText="ConfigJson" />
-                                        </InArgument>
+                                        <InOutArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">[ErrorCount]</InOutArgument>
+                                        <InArgument x:TypeArguments="njl:JObject" x:Key="ConfigJson">[ConfigJson]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="TechContent" />
                                         <InArgument x:TypeArguments="x:String" x:Key="HobbyContent" />
                                         <InArgument x:TypeArguments="x:String" x:Key="SportsContent" />
-                                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="ContentReport">
-                                          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="ContentReport" />
-                                        </InOutArgument>
-                                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="CollectionReport">
-                                          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="CollectionReport" />
-                                        </InOutArgument>
+                                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="ContentReport">[ContentReport]</InOutArgument>
+                                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="CollectionReport">[CollectionReport]</InOutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -606,7 +577,7 @@
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">719,910</av:Point>
                                             <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">981,940 1011,940 1011,648.25 868,648.25</av:PointCollection>
+                                            <av:PointCollection x:Key="ConnectorLocation">981,940 1011,940 1011,641.75 895,641.75</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">

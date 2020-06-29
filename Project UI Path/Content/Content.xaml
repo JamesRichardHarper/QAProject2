@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2320,2038</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2320,2078</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Content_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -67,7 +67,6 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Content" sap:VirtualizedContainerService.HintSize="2330,1973" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -538,7 +537,7 @@
                                                                   <av:PointCollection x:Key="ConnectorLocation">2046,1903 2046,1933 1770,1933 1770,1850 1740,1850</av:PointCollection>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <TryCatch sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                                              <TryCatch sap:VirtualizedContainerService.HintSize="438,526" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                                                 <TryCatch.Try>
                                                                   <Sequence sap:VirtualizedContainerService.HintSize="376,299" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                                                     <sap:WorkflowViewStateService.ViewState>
@@ -546,7 +545,7 @@
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Account="[ConfigJson(&quot;CompanyEmail&quot;).ToString.ToLower]" Body="[Email]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" IsBodyHtml="False" IsDraft="False" Subject="[ConfigJson(&quot;ContentSubject&quot;).ToString]" To="James.r.harper@hotmail.co.uk">
+                                                                    <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Account="[ConfigJson(&quot;CompanyEmail&quot;).ToString.ToLower]" Body="[Email]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" IsBodyHtml="False" IsDraft="False" Subject="[ConfigJson(&quot;ContentSubject&quot;).ToString]" To="[UserEmail]">
                                                                       <ui:SendOutlookMail.Files>
                                                                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                                                                       </ui:SendOutlookMail.Files>
@@ -830,29 +829,18 @@
           <av:PointCollection x:Key="ConnectorLocation">1802,376 1802,426</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_6">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Orchestrator " sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Content/Orchestrator Upload.xaml">
-              <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="njl:JObject" x:Key="ConfigJson">[ConfigJson]</InArgument>
-                <InOutArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">[ErrorCount]</InOutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Day">[DayName]</InArgument>
-              </ui:InvokeWorkflowFile.Arguments>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:InvokeWorkflowFile>
-          </Sequence>
-        </ui:CommentOut.Body>
-      </ui:CommentOut>
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Orchestrator " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Content/Orchestrator Upload.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="njl:JObject" x:Key="ConfigJson">[ConfigJson]</InArgument>
+          <InOutArgument x:TypeArguments="x:Int32" x:Key="ErrorCount">[ErrorCount]</InOutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Day">[DayName]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
       <FlowStep.Next>
         <FlowStep x:Name="__ReferenceID7">
           <sap:WorkflowViewStateService.ViewState>
